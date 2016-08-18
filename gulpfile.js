@@ -1,5 +1,7 @@
 var gulp = require("gulp");
 
+var slim = require("gulp-slim");
+
 var sass = require("gulp-sass");
 var autoprefixer = require("gulp-autoprefixer");
 
@@ -20,6 +22,15 @@ gulp.task("server", function() {
 gulp.task("watch", ['server'], function() {
     gulp.watch(["js/**/*.js", "!js/min/**/*.js"],["js"]);
     gulp.watch("sass/**/*.scss", ["sass"]);
+    gulp.watch("slim/**/*.slim", ["slim"]);
+});
+
+gulp.task("slim", function() {
+    gulp.src("slim/**/*.slim")
+    .pipe(plumber())
+    .pipe(slim())
+    .pipe(gulp.dest("./slim/html"))
+    .pipe(browser.reload({stream:true}));
 });
 
 gulp.task("sass", function() {
@@ -38,3 +49,4 @@ gulp.task("js", function() {
         .pipe(gulp.dest("./js/min"))
         .pipe(browser.reload({stream:true}));
 });
+
