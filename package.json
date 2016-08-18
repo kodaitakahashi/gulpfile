@@ -1,0 +1,26 @@
+{
+  "name": "gulp_development",
+  "version": "0.0.0",
+  "description": "gulp_development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "kodaitakahashi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kodaitakahashi/gulpfile"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}
