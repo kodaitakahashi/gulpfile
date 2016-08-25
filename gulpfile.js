@@ -58,7 +58,6 @@ gulp.task("react", function(){
     .pipe(plumber())
     .pipe(using())
     .pipe(react())
-    .pipe(gulp.dest('js/'));
+    .pipe(gulp.dest('js/'))
     .pipe(browser.reload({stream:true}));
 });
-
