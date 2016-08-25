@@ -32,7 +32,7 @@ gulp.task("slim", function() {
     gulp.src("slim/**/*.slim")
     .pipe(plumber())
     .pipe(slim())
-    .pipe(gulp.dest("./slim/html"))
+    .pipe(gulp.dest("./public/html"))
     .pipe(browser.reload({stream:true}));
 });
 
@@ -59,5 +59,6 @@ gulp.task("react", function(){
     .pipe(using())
     .pipe(react())
     .pipe(gulp.dest('js/'));
+    .pipe(browser.reload({stream:true}));
 });
 
